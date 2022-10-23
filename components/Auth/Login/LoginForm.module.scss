@@ -1,0 +1,32 @@
+@import "scss/variables.scss";
+
+.login {
+    position: relative;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &Input {
+        margin-bottom: 16px;
+    }
+
+    &Button {
+        margin-top: 16px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .login {
+        &Orange {
+            width: 56px;
+            height: 56px;
+        }
+
+        &Blue {
+            width: 31px;
+            height: 31px;
+        }
+    }
+}

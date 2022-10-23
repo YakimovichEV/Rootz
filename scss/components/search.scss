@@ -1,0 +1,59 @@
+@import "../variables.scss";
+
+.search {
+    position: relative;
+    width: 448px;
+
+    &__input {
+        display: block;
+        width: 100%;
+        height: 64px;
+        padding-left: 48px;
+        background: $white;
+        border: none;
+        border-radius: 40px;
+        box-shadow: 0px 30px 40px rgba(240, 101, 126, 0.05);
+
+        &::placeholder {
+            font-family: "Poppins", sans-serif;
+            font-size: 14px;
+            color: #807c7c;
+        }
+
+        &:focus {
+            outline: 2px solid $begonia;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        left: 21px;
+        top: 24px;
+        z-index: 1;
+    }
+
+    &__button {
+        position: absolute;
+        right: 8px;
+        top: 7px;
+        z-index: 1;
+    }
+}
+
+@media (max-width: 1024px) {
+    .centered {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 700px) {
+    .search {
+        width: 339px;
+    }
+}
+
+@media (max-width: 375px) {
+    .search {
+        width: 340px;
+    }
+}

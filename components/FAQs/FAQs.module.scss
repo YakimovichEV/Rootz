@@ -1,0 +1,73 @@
+@import "scss/variables.scss";
+
+.faq {
+    margin: 192px 0;
+
+    &Inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &Item {
+        width: 45%;
+        margin-top: 25px;
+
+        &:last-child {
+            width: 48%;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 56px;
+            text-transform: capitalize;
+            color: $lightBlack;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 32px;
+            color: $eerieBlack;
+            opacity: 0.9;
+            margin: 50px 0 70px;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .faq {
+        margin: 100px 0;
+
+        &Inner {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &Item {
+            width: 100%;
+            text-align: center;
+
+            &:last-child {
+                width: 100%;
+                margin-top: 50px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .faq {
+        &Item {
+            h2 {
+                font-size: 28px;
+                line-height: 150%;
+            }
+
+            p {
+                font-size: 15px;
+                line-height: 175%;
+            }
+        }
+    }
+}

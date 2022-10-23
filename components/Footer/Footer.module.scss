@@ -1,0 +1,97 @@
+@import "scss/variables.scss";
+
+.footer {
+    background: $gray;
+
+    &Inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 100px 0;
+    }
+
+    &Item {
+        h2,
+        h3 {
+            font-size: 34px;
+            font-weight: 700;
+            line-height: 48px;
+            color: $charcoal;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            text-transform: uppercase;
+        }
+
+        h3 {
+            font-size: 20px;
+            letter-spacing: 0.3px;
+        }
+
+        p {
+            font-size: 13px;
+            letter-spacing: 0.3px;
+            color: $charcoal;
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        &Inner {
+            flex-wrap: wrap;
+        }
+
+        &Item {
+            width: 100%;
+
+            &:nth-child(2n),
+            &:last-child {
+                width: 50%;
+            }
+
+            h2 {
+                font-size: 28px;
+                line-height: 48px;
+            }
+
+            h3 {
+                font-size: 18px;
+                line-height: 32px;
+            }
+
+            p {
+                font-size: 12px;
+                line-height: 24px;
+            }
+
+            div {
+                justify-content: flex-start;
+
+                button {
+                    &:nth-child(2n) {
+                        margin: 0 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// @media (max-width: 575px) {
+//     .footer {
+//         &Item {
+//             &:nth-child(2n),
+//             &:last-child {
+//                 width: 100%;
+//             }
+//         }
+//     }
+// }

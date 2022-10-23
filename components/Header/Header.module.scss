@@ -1,0 +1,137 @@
+@import "scss/variables.scss";
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+    border-bottom: 4px $lightBlack;
+    background: $gray;
+
+    &Container {
+        position: relative;
+        width: 90%;
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    &Inner {
+        padding: 30px 0 40px 0;
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        border-bottom: 4px solid $lightBlack;
+    }
+
+    &Item {
+        display: flex;
+        align-items: center;
+
+        &:first-child {
+            cursor: pointer;
+            transition: $fastDuration linear;
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+
+    &Logo {
+        font-size: 16px;
+        font-weight: bold;
+        margin-left: 10px;
+    }
+
+    &Menu {
+        display: flex;
+
+        ul {
+            padding: 0;
+            display: flex;
+
+            li {
+                list-style-type: none;
+                margin: 0 50px;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                a {
+                    font-size: 16px;
+                    font-weight: 400;
+                    opacity: 0.8;
+                    transition: font-weight 0.2s linear;
+
+                    &:hover {
+                        font-weight: 700;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        &.mobile {
+            display: none;
+        }
+    }
+
+    &Icon {
+        cursor: pointer;
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .header {
+        &Menu {
+            display: none;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                background: $gray;
+
+                li {
+                    margin-bottom: 40px;
+                    text-align: center;
+
+                    &:first-child {
+                        margin-top: 72px;
+                        margin-left: 50px;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 165px;
+                    }
+
+                    a {
+                        font-size: 28px;
+                        line-height: 150%;
+                    }
+                }
+            }
+
+            &.mobile {
+                width: 375px;
+                position: absolute;
+                top: 100%;
+                right: -6%;
+                z-index: 10;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background: $gray;
+                padding: 10px;
+            }
+        }
+
+        &Icon {
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 38px;
+            z-index: 100;
+        }
+    }
+}

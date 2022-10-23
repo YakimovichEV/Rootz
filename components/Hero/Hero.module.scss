@@ -1,0 +1,156 @@
+@import "../../scss/variables.scss";
+
+.hero {
+    height: 100vh;
+    background: $gray;
+
+    &Inner {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &Item {
+        width: 55%;
+        margin-top: 120px;
+
+        h2 {
+            font-family: "Satisfy", sans-serif;
+            font-size: 108px;
+            line-height: 1;
+        }
+
+        p {
+            margin: 60px 0 50px 0;
+            font-size: 16px;
+        }
+
+        &:last-child {
+            width: 45%;
+            margin: 50px 0 0 100px;
+        }
+    }
+
+    &Card {
+        width: 272px;
+        height: 320px;
+        background: $orange;
+        border-radius: 50px;
+        overflow: hidden;
+        position: relative;
+        bottom: 267px;
+        right: 50px;
+
+        div {
+            span {
+                position: absolute;
+                bottom: 112px;
+                z-index: 1000;
+                left: 35px;
+                font-weight: 700;
+                font-size: 20px;
+                color: $white;
+
+                &:last-child {
+                    bottom: 32px;
+                    font-size: 56px;
+                }
+            }
+        }
+    }
+
+    &Icon {
+        position: absolute;
+        top: 32px;
+        left: 32px;
+        z-index: 1000;
+    }
+
+    &Orange,
+    &Blue {
+        width: 271px;
+        height: 320px;
+        position: absolute;
+        border-radius: 37% 63% 60% 40% / 52% 0% 100% 48%;
+    }
+
+    &Orange {
+        transform: rotate(16deg);
+        top: -126px;
+        left: -16px;
+        z-index: 10;
+        background: $begonia;
+    }
+
+    &Blue {
+        transform: rotate(268deg);
+        bottom: -110px;
+        right: 15px;
+        z-index: 11;
+        background: $slateBlue;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        height: 140vh;
+
+        &Inner {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &Item {
+            width: 100%;
+            margin: 120px auto;
+
+            h2,
+            p {
+                text-align: center;
+            }
+        }
+
+        &Card {
+            bottom: 375px;
+            right: 132px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 120vh;
+
+        &Item {
+            margin: 50px auto 0;
+
+            h2 {
+                font-size: 80px;
+            }
+
+            p {
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        &Item {
+            &:last-child {
+                margin: 0 0 0 100px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        &Item {
+            &:last-child {
+                margin: 0 0 0 50px;
+            }
+        }
+    }
+}

@@ -1,0 +1,96 @@
+@import "../variables.scss";
+
+.button {
+    font-family: "Poppins", sans-serif !important;
+    display: inline-block;
+    background-color: $begonia;
+    border-radius: 30px;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color $fastDuration ease-in-out,
+        border-color $fastDuration ease-in-out;
+    border: 1px solid transparent;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+
+    span {
+        color: #fff;
+    }
+
+    svg {
+        padding: 3px;
+    }
+
+    &:hover {
+        background-color: darken($begonia, 8%);
+    }
+
+    &:active {
+        background-color: darken($begonia, 12%);
+        transform: translateY(1px);
+    }
+
+    &--header {
+        background-color: $white;
+        color: $black;
+        padding: 13px 30px;
+        text-transform: none;
+    }
+
+    &--circle,
+    &--social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        font-weight: 400;
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        padding: 0;
+        border-width: 2px;
+    }
+
+    &--social {
+        background-color: $charcoal;
+        width: 32px;
+        height: 32px;
+        min-width: 32px;
+    }
+
+    &--circleSize {
+        width: 40px;
+    }
+
+    &--extraSm {
+        width: 100px;
+        padding: 15px 16px;
+        font-size: 12px;
+    }
+
+    &--sm {
+        width: 122px;
+    }
+
+    &--base {
+        width: 145px;
+    }
+
+    &--md {
+        width: 166px;
+    }
+
+    &--xl {
+        width: 312px;
+    }
+
+    &--2xl {
+        width: 337px;
+    }
+}
