@@ -93,7 +93,7 @@
 
 @media (max-width: 1024px) {
     .hero {
-        height: 140vh;
+        height: 1100px;
 
         &Inner {
             flex-direction: column;
@@ -104,6 +104,10 @@
         &Item {
             width: 100%;
             margin: 120px auto;
+
+            &:last-child {
+                margin: 0 0 0 100px;
+            }
 
             h2,
             p {
@@ -120,36 +124,16 @@
 
 @media (max-width: 768px) {
     .hero {
-        height: 120vh;
+        height: 1000px;
 
         &Item {
             margin: 50px auto 0;
+            &:last-child {
+                margin: 0 0 0 50px;
+            }
 
             h2 {
                 font-size: 80px;
-            }
-
-            p {
-            }
-        }
-    }
-}
-
-@media (max-width: 1024px) {
-    .hero {
-        &Item {
-            &:last-child {
-                margin: 0 0 0 100px;
-            }
-        }
-    }
-}
-
-@media (max-width: 768px) {
-    .hero {
-        &Item {
-            &:last-child {
-                margin: 0 0 0 50px;
             }
         }
     }
